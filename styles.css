@@ -1,5 +1,3 @@
-/* Itt a teljes, frissített CSS kód következik... */
-/* ... (A korábban megadott, hosszú és teljes CSS kód) ... */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Merriweather:wght@400;700;900&family=Montserrat:wght@600;700&display=swap');
 
 :root {
@@ -13,99 +11,220 @@
   --border-color: #e9ecef;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--light-gray);
-  margin: 0; padding: 20px 15px; color: var(--text-color);
-  overflow-x: hidden; line-height: 1.65;
+  margin: 0;
+  padding: 20px 15px;
+  color: var(--text-color);
+  overflow-x: hidden;
+  line-height: 1.65;
 }
 
-.page-container { max-width: 1200px; margin: 0 auto; }
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .offer-program-group {
   background-color: var(--white);
-  border-radius: 16px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
-  margin-bottom: 40px; overflow: hidden; border: 1px solid var(--border-color);
-  opacity: 0; transform: translateY(30px); animation: fadeInUp .7s ease-out forwards;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  margin-bottom: 40px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp .7s ease-out forwards;
 }
 
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-.program-hero-section { position: relative; }
-.main-image-container { width: 100%; height: 400px; overflow: hidden; position: relative; }
-.hero-main-image { width: 100%; height: 100%; object-fit: cover; }
+.program-hero-section {
+  position: relative;
+}
 
+.main-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  background-color: #e0e0e0;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Csillagok stílusa --- */
 .hero-stars-overlay {
-    position: absolute; top: 15px; left: 15px;
-    background-color: rgba(0, 0, 0, 0.65); color: #FFD700;
-    padding: 8px 14px; border-radius: 50px; z-index: 3;
-    font-size: 1rem; display: flex; gap: 5px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #FFD700;
+    padding: 8px 14px;
+    border-radius: 50px;
+    z-index: 3;
+    font-size: 1rem;
+    display: flex;
+    gap: 5px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-hotel-name-overlay {
-  position: absolute; bottom: 75px; left: 0; right: 0;
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-  color: var(--white); padding: 30px 20px 15px 20px;
-  font-family: 'Montserrat', sans-serif; z-index: 2;
+  color: var(--white);
+  padding: 30px 20px 15px 20px;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 2;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+/* --- Fluid betűméret a hotel nevéhez --- */
 .hero-hotel-name-overlay h1 {
-  margin: 0; font-weight: 700;
-  font-size: clamp(1.5rem, 6vw, 2.5rem); line-height: 1.25;
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  line-height: 1.25;
 }
 
 .hero-info-pills-overlay {
-  position: absolute; top: 15px; right: 15px;
-  display: flex; flex-direction: column; gap: 8px; z-index: 3;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 3;
 }
 
 .hero-info-pills-overlay span {
-  background-color: rgba(255, 255, 255, 0.92); color: var(--primary-dark);
-  padding: 7px 14px; border-radius: 16px; font-size: 0.8rem; font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--primary-dark);
+  padding: 7px 14px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
-.program-content-wrapper { padding: 25px; }
+.program-content-wrapper {
+  padding: 25px;
+}
 
 .section-title {
-  font-family: 'Merriweather', serif; color: var(--primary-dark);
-  margin-top: 25px; margin-bottom: 18px; font-weight: 700;
-  font-size: 1.6rem; border-bottom: 2px solid var(--primary-color);
+  font-family: 'Merriweather', serif;
+  color: var(--primary-dark);
+  margin-top: 25px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 10px;
 }
 
-.desktop-offers-table {
-  width: 100%; border-collapse: collapse; margin-top: 18px;
+.recommendation-section {
+  background-color: #e6f3ff;
+  border: 1px solid #b8d6f4;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 0 0 25px 0;
 }
-.desktop-offers-table th { background-color: var(--primary-dark); color: var(--white); padding: 12px; text-align: left; }
-.desktop-offers-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
-.desktop-offers-table .price-cell { font-weight: bold; color: var(--price-color); }
 
-.mobile-offers-container { display: none; } /* Alapból rejtett */
+.description-summary p {
+    margin-bottom: 0;
+}
+
+.desktop-offers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+.desktop-offers-table th {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 12px;
+  text-align: left;
+}
+
+.desktop-offers-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.desktop-offers-table .price-cell {
+  font-weight: bold;
+  color: var(--price-color);
+}
 
 .button {
-  background: var(--accent-color); color: white; padding: 10px 20px;
-  text-decoration: none; border-radius: 20px; font-weight: 600;
-  display: inline-block; border: none; cursor: pointer;
+  background: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
-/* MOBIL NÉZET */
+/* --- Az új mobil kártyák stílusai --- */
+.mobile-offers-container {
+  display: none; /* Alapból rejtett, csak a media query-ben lesz flex */
+}
+.mobile-offer-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.mobile-offer-info { display: flex; flex-direction: column; gap: 8px; }
+.mobile-offer-info .info-row { display: flex; justify-content: space-between; font-size: 0.9em; }
+.mobile-offer-info .room-row { font-weight: 500; }
+.mobile-offer-price { font-size: 1.8em; font-weight: 700; text-align: center; margin: 12px 0; background-color: #f8f9fa; border-radius: 8px; padding: 10px; }
+.mobile-offer-actions { display: flex; gap: 12px; }
+.mobile-offer-actions .button { flex: 1; }
+
+/* --- A régi mobilos tábla végleges elrejtése --- */
+.mobile-offers-table {
+    display: none !important;
+}
+
+/* --- RESZPONZÍV LOGIKA --- */
 @media (max-width: 768px) {
-  .desktop-offers-table { display: none; }
-  .mobile-offers-table { display: none !important; } /* A régit is elrejtjük */
-  .mobile-offers-container {
-    display: flex; flex-direction: column; gap: 16px;
-  }
-  .mobile-offer-card {
-    background-color: var(--white); border: 1px solid var(--border-color);
-    border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  .mobile-offer-info { display: flex; flex-direction: column; gap: 8px; }
-  .mobile-offer-info .info-row { display: flex; justify-content: space-between; font-size: 0.9em; }
-  .mobile-offer-info .room-row { font-weight: 500; }
-  .mobile-offer-price { font-size: 1.8em; font-weight: 700; text-align: center; margin: 12px 0; }
-  .mobile-offer-actions { display: flex; gap: 12px; }
-  .mobile-offer-actions .button { flex: 1; text-align: center; }
+    .desktop-offers-table {
+        display: none;
+    }
+    .mobile-offers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .program-content-wrapper {
+        padding: 15px;
+    }
 }
